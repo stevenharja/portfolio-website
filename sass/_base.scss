@@ -3,6 +3,18 @@ html {
   font-family: "Raleway", sans-serif;
   cursor: default;
   scroll-behavior: smooth;
+
+  @include respond(tab-land) {
+    font-size: 80%;
+  }
+
+  @include respond(phone) {
+    font-size: 70%;
+  }
+
+  @include respond(big-desktop) {
+    font-size: 136%;
+  }
 }
 
 *,
