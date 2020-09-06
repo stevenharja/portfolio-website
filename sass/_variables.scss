@@ -1,0 +1,116 @@
+//Color
+$color-primary-light: #3498db;
+$color-primary-dark: #2980b9;
+$color-grey: #eee;
+$color-black: #333;
+
+//UTIL
+.u-center-text {
+  text-align: center;
+}
+
+.u-margin-heading {
+  margin-bottom: 4rem;
+}
+
+//ANIMATION
+@keyframes moveFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+
+  80% {
+    opacity: 1;
+    transform: translateY(0.5rem);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes underlineTextMoveRight {
+  0% {
+    width: 0;
+    opacity: 1;
+  }
+
+  50% {
+    width: 100%;
+    opacity: 1;
+  }
+
+  100% {
+    width: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes underlineTextMoveLeft {
+  0% {
+    width: 100%;
+    opacity: 1;
+  }
+
+  50% {
+    width: 0%;
+    opacity: 1;
+  }
+
+  100% {
+    width: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes appearBorder {
+  0% {
+    border-bottom: 3px solid transparent;
+  }
+
+  50% {
+    border-bottom: 3px solid white;
+  }
+
+  100% {
+    border-bottom: 3px solid transparent;
+  }
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0);
+  }
+
+  25% {
+    transform: translateY(-0.5rem);
+  }
+
+  75% {
+    transform: translateY(0.5rem);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes arrowDown {
+  60% {
+    transform: translateY(1rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes arrowDownHeader {
+  60% {
+    transform: translateX(-50%) translateY(-2.25rem);
+  }
+
+  100% {
+    transform: translateX(-50%) translateY(-3rem);
+  }
+}

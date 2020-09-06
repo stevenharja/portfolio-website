@@ -1,0 +1,23 @@
+html {
+  font-size: 100%;
+  font-family: "Raleway", sans-serif;
+  cursor: default;
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: $color-primary-light;
+  color: #fff;
+}

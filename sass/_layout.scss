@@ -1,0 +1,216 @@
+.navigation {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 99;
+  border-radius: 100px;
+  background-color: #fff;
+  padding: 3rem 1rem;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  &__item {
+    display: block;
+    transition: all 0.3s;
+    &:hover {
+      transform: scale(1.1) translateY(-3px);
+    }
+  }
+
+  &__icon {
+    fill: $color-primary-light;
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+.header {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url("../img/hero-img.jpg");
+  background-size: cover;
+  background-position: center;
+
+  height: 95vh;
+  position: relative;
+
+  color: $color-grey;
+
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+  cursor: default;
+
+  &__logo-box {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 3px solid $color-grey;
+    padding: 0.5rem;
+  }
+
+  &__logo {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+
+  &__text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 3.5rem;
+    font-weight: 400;
+    font-family: "Charmonman";
+    padding: 0.5rem;
+    animation: moveFromTop 1s;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 2px;
+      width: 0;
+      background-color: $color-grey;
+      animation: underlineTextMoveRight 3s infinite 2s;
+    }
+  }
+
+  &__role {
+    font-size: 2.5rem;
+    font-weight: 400;
+    font-family: "Charmonman";
+    margin-bottom: 2rem;
+    opacity: 1;
+    animation: moveFromTop 1s 1s;
+    animation-fill-mode: backwards;
+    padding: 0.5rem;
+  }
+
+  &__cta {
+  }
+
+  &__btn {
+    &,
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: $color-black;
+      display: inline-block; //Required to perform transform.
+      background-color: $color-grey;
+      padding: 1rem 1.5rem;
+      border-radius: 30px;
+      font-size: 1.25rem;
+      transition: all 0.2s;
+      position: relative;
+
+      &:not(:last-child) {
+        margin-right: 0.5rem;
+      }
+    }
+
+    &::before {
+      content: "\25BC";
+      font-size: 1.75rem;
+      color: $color-grey;
+      z-index: 99;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%) translateY(-3rem);
+      opacity: 0;
+      animation: arrowDownHeader 1s infinite;
+      transition: all 0.3s;
+    }
+
+    &:hover {
+      transform: translateY(-0.25rem);
+      box-shadow: 0 1rem 1.5rem rgba($color-black, 0.3);
+    }
+
+    &:hover::before {
+      opacity: 1;
+    }
+  }
+}
+
+.section-projects {
+  margin-top: -5rem;
+  padding: 7rem;
+  &__content {
+    display: flex;
+    justify-content: center;
+
+    & > * {
+      flex: 1;
+    }
+  }
+  margin-bottom: 3rem;
+}
+
+.section-about {
+  background-image: radial-gradient($color-primary-light, $color-primary-dark);
+  padding: 5rem 7rem;
+  transform: skewY(5deg);
+
+  & > * {
+    transform: skewY(-5deg);
+  }
+
+  &__content > * {
+    margin-bottom: 3rem;
+  }
+}
+
+.section-contact {
+  padding: 5rem 7rem;
+  text-align: center;
+  margin-top: -5rem;
+
+  &__cta {
+    display: block;
+  }
+
+  &__cta-logo {
+    width: 7rem;
+    height: 7rem;
+    fill: $color-primary-dark;
+    animation: arrowDown 1s infinite;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
+
+.footer {
+  padding: 3rem 5rem;
+  background-color: $color-black;
+  color: $color-grey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__logo {
+    border: 3px solid $color-grey;
+    padding: 0.5rem;
+    cursor: default;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+  }
+}

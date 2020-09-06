@@ -4,183 +4,210 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Steven Harjapramana's Portfolio</title>
-    <link rel="stylesheet" href="assets/css/all.css" />
-    <!--Font Awesome CSS-->
-    <link rel="stylesheet" href="assets/css/main.css" />
     <link
+      href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,700,900"
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Quicksand"
     />
     <link
+      href="https://fonts.googleapis.com/css?family=Charmonman:400,700"
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Lobster"
     />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <!-- Header Section -->
-    <div id="header-wrapper">
-      <div id="header">
-        <!-- Logo -->
-        <h1 id="logo">Steven Harjapramana</h1>
-        <!-- Navigation Options -->
-        <nav id="nav">
-          <ul>
-            <li><a href="#header-wrapper">Home</a></li>
-            <li><a href="#project">Projects</a></li>
-            <li><a href="#about">Contact</a></li>
-          </ul>
-        </nav>
+    <div class="navigation">
+      <nav class="navigation__list">
+        <a class="navigation__item" href="#header">
+          <svg class="navigation__icon">
+            <use xlink:href="img/sprite.svg#icon-home"></use>
+          </svg>
+        </a>
+        <a class="navigation__item" href="#projects">
+          <svg class="navigation__icon">
+            <use xlink:href="img/sprite.svg#icon-folder-open"></use>
+          </svg>
+        </a>
+        <a class="navigation__item" href="#about">
+          <svg class="navigation__icon">
+            <use xlink:href="img/sprite.svg#icon-user"></use>
+          </svg>
+        </a>
+
+        <a class="navigation__item" href="#contact">
+          <svg class="navigation__icon">
+            <use xlink:href="img/sprite.svg#icon-address-book"></use>
+          </svg>
+        </a>
+      </nav>
+    </div>
+
+    <header class="header" id="header">
+      <div class="header__logo-box">
+        <div class="header__logo">SH</div>
       </div>
 
-      <!-- Hero Section -->
-      <section id="hero">
-        <div id="hero-inner">
-          <header>
-            <h2>Steven Harjapramana</h2>
-          </header>
-          <span>Web Developer | Software Engineer</span>
-          <ul>
-            <li onclick="location.href = '#project'">Projects</li>
-            <li onclick="location.href = '#about'">Resume</li>
-            <li onclick="location.href ='#about'">About Me</li>
-          </ul>
+      <div class="header__text-box">
+        <h1 class="header__title">Steven Harjapramana</h1>
+        <div class="header__role">Web Developer</div>
+        <div class="header__cta">
+          <a href="#" class="header__btn header__btn--1">About Me!</a>
+          <a href="#" class="header__btn header__btn--2">Projects</a>
+          <a href="#" class="header__btn header__btn--3">Contact Me!</a>
         </div>
-      </section>
-    </div>
+      </div>
+    </header>
+    <main>
+      <div class="section-projects" id="projects">
+        <h1
+          class="heading-primary heading-primary--main u-center-text u-margin-heading"
+        >
+          My Projects
+        </h1>
+        <div class="section-projects__content">
+          <a
+            href="https://stevenharja.github.io/travellogy-template/"
+            target="__blank"
+            class="project"
+          >
+            <figure class="project__image-box">
+              <img
+                src="img/project_1_img-crop.png"
+                alt="Project 1"
+                class="project__image"
+              />
+              <figcaption class="project__caption">
+                <span class="project__name">Travelloging</span>
+                <span class="project__language">HTML, CSS, JS</span>
+              </figcaption>
+            </figure>
+          </a>
+          <a
+            href="https://stevenharja.github.io/EVERFit/"
+            target="__blank"
+            class="project"
+          >
+            <figure class="project__image-box">
+              <img
+                src="img/everfit.png"
+                alt="Project 2"
+                class="project__image"
+              />
+              <figcaption class="project__caption">
+                <span class="project__name">Everfit</span>
+                <span class="project__language">HTML, CSS, SASS</span>
+              </figcaption>
+            </figure>
+          </a>
+          <a
+            href="https://stevenharja.github.io/moviepedia/"
+            target="__blank"
+            class="project"
+          >
+            <figure class="project__image-box">
+              <img
+                src="img/project_3_img-crop.png"
+                alt="Project 3"
+                class="project__image"
+              />
+              <figcaption class="project__caption">
+                <span class="project__name">Moviepedia</span>
+                <span class="project__language">HTML, CSS, JS, AJAX</span>
+              </figcaption>
+            </figure>
+          </a>
+        </div>
+      </div>
 
-    <!-- Main Section -->
-    <div id="main-wrapper">
-      <!-- Project Section -->
-      <section class="content" id="project">
-        <h1>Projects</h1>
-        <ul class="project-list">
-          <li id="moviepedia">
-            <h2>Moviepedia</h2>
-            <h3>
-              A movie searching website powered by OMDb API, Javascript and
-              JQuery.
-            </h3>
-            <h3>
-              Utilised: HTML, CSS, Javascript, JQuery, OMDb API, Bootstrap
-              Framework
-            </h3>
-            <div class="img-carousel">
-              <img src="assets/img/project_3_img.png" />
-              <img src="assets/img/project_3_img2.png" />
-            </div>
-            <ul class="actions">
-              <!-- Make sure it opens a new window. -->
-              <li
-                onclick="window.open('https://github.com/stevenharja/moviepedia')"
-              >
-                GitHub
-              </li>
-              <li
-                onclick="window.open('https://stevenharja.github.io/moviepedia/')"
-              >
-                Live Version
-              </li>
-            </ul>
-          </li>
-          <li id="travelloging">
-            <h2>Travelloging</h2>
-            <h3>Website Blogs Template</h3>
-            <h3>Utilised: HTML, CSS, Javascript, JQuery</h3>
-            <div class="img-carousel">
-              <img src="assets/img/project_1_img.png" />
-              <img src="assets/img/project_1_img2.png" />
-            </div>
-            <ul class="actions">
-              <!-- Make sure it opens a new window. -->
-              <li
-                onclick="window.open('https://github.com/stevenharja/travellogy-template')"
-              >
-                GitHub
-              </li>
-              <li
-                onclick="window.open('https://stevenharja.github.io/travellogy-template/')"
-              >
-                Live Version
-              </li>
-            </ul>
-          </li>
-          <li id="harmonics">
-            <h2>Harmonics</h2>
-            <h3>Music-Oriented Melody Generator and Reddit's Top Posts</h3>
-            <h3>Utilised: HTML, CSS, Javascript, JQuery</h3>
-            <div class="img-carousel">
-              <img class="active" src="assets/img/project_2_img.png" />
-              <img src="assets/img/project_2_img1.png" />
-            </div>
-            <ul class="actions">
-              <!-- Make sure it opens a new window. -->
-              <li
-                onclick="window.open('https://github.com/stevenharja/harmonics')"
-              >
-                GitHub
-              </li>
-              <li
-                onclick="window.open('https://stevenharja.github.io/harmonics/')"
-              >
-                Live Version
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </section>
+      <div class="section-about" id="about">
+        <h1
+          class="heading-primary heading-primary--white heading-primary--animated u-margin-heading"
+        >
+          About Me
+        </h1>
 
-      <!-- About Me  and Contact Section -->
-      <section class="content" id="about">
-        <h1>About Me</h1>
-        <div class="about-me">
-          <p>
-            My name is Steven Harjapramana, I am a web developer with a passion
-            to create. I spend my free time learning about new technologies and
-            developing projects as well as learning and improving my skills.
-          </p>
-          <div class="contact">
-            <ul class="social-media">
-              <li
-                onclick="window.open('https://www.linkedin.com/in/steven-harjapramana/')"
-              >
-                <i class="fab fa-linkedin-in"></i> LinkedIn
-              </li>
-              <li onclick="window.open('https://github.com/stevenharja')">
-                <i class="fab fa-github"></i> GitHub
-              </li>
-              <li>
-                <a
-                  onclick="window.open('assets/file/Steven_Harjapramana_Resume.pdf')"
-                >
-                  <i class="far fa-file"></i> Resume
-                </a>
-              </li>
-              <li onclick="location.href ='mailto:stevenharja@gmail.com' ">
-                <i class="far fa-envelope"></i> Email Me
-              </li>
-            </ul>
+        <div class="section-about__content">
+          <div class="chat-box chat-box--right">
+            <div class="chat-box__logo-box">
+              <div class="chat-box__logo">SH</div>
+            </div>
+            <p class="chat-box__paragraph">
+              Hi there visitor! My name is Steven Harjapramana, and I am a web
+              developer with a passion for technologies. I always learn new
+              things everyday and that is what I strive for.
+            </p>
+          </div>
+
+          <div class="chat-box chat-box--left">
+            <div class="chat-box__logo-box">
+              <div class="chat-box__logo">SH</div>
+            </div>
+            <p class="chat-box__paragraph">
+              If you could provide me with the opportunity to work with you,
+              then just know that I always give the best that I could in
+              everything I do.
+            </p>
           </div>
         </div>
-      </section>
-    </div>
+      </div>
 
-    <div id="footer-wrapper">
-      <section class="footer">
-        &copy; Copyright Steven Harjapramana. All Rights Reserved 2020
-        <ul class="social-media">
-          <li
-            onclick="window.open('https://www.linkedin.com/in/steven-harjapramana/')"
+      <div class="section-contact" id="contact">
+        <div class="section-contact__cta">
+          <svg class="section-contact__cta-logo">
+            <use xlink:href="img/sprite.svg#icon-arrow_down"></use>
+          </svg>
+        </div>
+
+        <h1
+          class="heading-primary heading-primary--main u-center-text u-margin-heading"
+        >
+          Hire Me!
+        </h1>
+
+        <div class="section-contact__content">
+          <a
+            href="https://www.linkedin.com/in/steven-harjapramana/"
+            class="card"
+            target="_blank"
           >
-            <i class="fab fa-linkedin-in"></i>
-          </li>
-          <li onclick="window.open('https://github.com/stevenharja')">
-            <i class="fab fa-github"></i>
-          </li>
-          <li onclick="location.href ='mailto:stevenharja@gmail.com' ">
-            <i class="far fa-envelope"></i>
-          </li>
-        </ul>
-      </section>
-    </div>
+            <div class="card__logo-box">
+              <svg class="card__icon">
+                <use xlink:href="img/sprite.svg#icon-linkedin"></use>
+              </svg>
+            </div>
+            <div class="card__name">My LinkedIn</div>
+          </a>
+          <a href="https://github.com/stevenharja" class="card" target="_blank">
+            <div class="card__logo-box">
+              <svg class="card__icon">
+                <use xlink:href="img/sprite.svg#icon-github"></use>
+              </svg>
+            </div>
+            <div class="card__name">My GitHub</div>
+          </a>
+          <a href="mailto:stevenharja@gmail.com" class="card">
+            <div class="card__logo-box">
+              <svg class="card__icon">
+                <use xlink:href="img/sprite.svg#icon-envelop"></use>
+              </svg>
+            </div>
+            <div class="card__name">Email Me!</div>
+          </a>
+          <a class="card" href="file/Steven_Harjapramana_Resume.pdf" download>
+            <div class="card__logo-box">
+              <svg class="card__icon">
+                <use xlink:href="img/sprite.svg#icon-profile"></use>
+              </svg>
+            </div>
+            <div class="card__name">My Resume</div>
+          </a>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__logo">SH</div>
+      <div class="footer__copyright-text">
+        Copyright &copy; Steven Harjapramana 2020.
+      </div>
+    </footer>
   </body>
 </html>
