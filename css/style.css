@@ -89,6 +89,7 @@ html {
   box-sizing: inherit; }
 
 body {
+  position: relative;
   box-sizing: border-box; }
 
 ::selection {
@@ -480,3 +481,18 @@ body {
 .card:hover .card__name {
   z-index: 1;
   color: #eee; }
+
+.alert {
+  position: fixed;
+  padding: 2rem;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: linear-gradient(to right bottom, #00b09b, #96c93d);
+  border-radius: 3px;
+  z-index: 999;
+  color: #eee;
+  font-weight: 600;
+  text-align: center; }
+  .alert__link:link, .alert__link:visited {
+    color: #eee; }

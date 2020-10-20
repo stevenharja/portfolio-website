@@ -269,3 +269,22 @@
     color: $color-grey;
   }
 }
+
+.alert {
+  position: fixed;
+  padding: 2rem;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: linear-gradient(to right bottom, #00b09b, #96c93d);
+  border-radius: 3px;
+  z-index: 999;
+  color: $color-grey;
+  font-weight: 600;
+  text-align: center;
+
+  &__link:link,
+  &__link:visited {
+    color: $color-grey;
+  }
+}
